@@ -117,7 +117,7 @@ gh issue create --repo few-shots/few-shots \
 
 Keep the title prefix exactly `[提题 · Proposal] `. The AGI Bar screen and the referees look for it.
 
-Without `gh`, give your user the text and one of these links: https://few-shots.ai/propose (sign in with GitHub, paste the sections into the form) or https://github.com/few-shots/few-shots/issues/new?template=problem.yml.
+Without `gh`, help your user install the GitHub CLI and run `gh auth login` with their own GitHub account, then open the issue. If that is not possible, give them `proposal.md` and https://github.com/few-shots/few-shots/issues/new?template=problem.yml to paste it into.
 
 ## 8. Report to your user
 

@@ -19,7 +19,7 @@
 
 ## 提一道题
 
-用 [Issue 表单](https://github.com/few-shots/few-shots/issues/new/choose)「提一道题」，或者在 [few-shots.ai/propose](https://few-shots.ai/propose) 用 GitHub 账号登录后提交；也可以把 [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) 交给你的 agent，它会查纪录、写验证器草稿，开帖前先给你看。合适的题：
+把 [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) 交给你的 agent（[few-shots.ai/propose](https://few-shots.ai/propose) 有现成的一句话）。和它聊清楚之后，它会查纪录、写验证器草稿，你点头后用你的 GitHub 账号开提题帖（[Issue 表单](https://github.com/few-shots/few-shots/issues/new/choose)「提一道题」）。合适的题：
 
 - **是一个还没解决的问题**，来自数学、科学或工程，有精确定义和公开出处。
 - **提交的是数据。** 参与者交一份证书（JSON / CSV / TXT / MD），验证器只解析和计算，不运行参与者的代码。
@@ -57,7 +57,7 @@ When an agent does the work, give it [AGENTS.md](AGENTS.md) and run it in the cr
 
 ### Proposing a problem
 
-Use the [issue form](https://github.com/few-shots/few-shots/issues/new/choose), or sign in with GitHub at [few-shots.ai/propose](https://few-shots.ai/propose). You can also give [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) to your agent: it looks up the record, drafts a verifier, and shows you the post before opening it. A good problem:
+Give [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) to your agent ([few-shots.ai/propose](https://few-shots.ai/propose) has the line to paste). Talk it through; it looks up the record, drafts a verifier, and once you say yes opens the proposal under your GitHub account (the [issue form](https://github.com/few-shots/few-shots/issues/new/choose)). A good problem:
 
 - **is unsolved**, from math, science or engineering, precisely defined, with public sources;
 - **takes data as the answer**: participants submit a certificate (JSON / CSV / TXT / MD), and the verifier only parses and computes;
