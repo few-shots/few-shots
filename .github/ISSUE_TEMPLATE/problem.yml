@@ -1,16 +1,16 @@
-name: 提一道题 · Propose a problem
+name: 出一道题 · Propose a problem
 description: 数学、科学或工程里还没解决的问题，进展是一个由程序检查的数 · An unsolved problem in math, science or engineering whose progress is one number checked by a program
-title: "[提题 · Proposal] "
+title: "[出题 · Proposal] "
 labels: ["proposal"]
 body:
   - type: markdown
     attributes:
       value: |
-        什么样的题合适，见 CONTRIBUTING.md 的「提一道题」。几点提醒：
+        什么样的题合适，见 CONTRIBUTING.md 的「出一道题」。几点提醒：
 
         - Issue 是公开的。不要贴未公开的数据、个人信息或任何凭据。
         - 只收证书型题：参与者提交的是数据（JSON / CSV / TXT / MD），验证器只解析和计算，不运行参与者的代码。
-        - 题目如被采用，会对所有人同时公开，提题人也不会提前拿到题面、验证器或基线。
+        - 题目如被采用，会对所有人同时公开，出题人也不会提前拿到题面、验证器或基线。
 
         What makes a good problem: see "Proposing a problem" in CONTRIBUTING.md. Reminders:
 
@@ -88,5 +88,5 @@ body:
           required: true
         - label: 我有权公开以上内容，所列数据的许可允许公开使用。 · I may publish the above, and the data's licence allows public use.
           required: true
-        - label: 我理解题目如被采用，会对所有人同时公开，提题人也不会提前拿到题面、验证器或基线。 · I understand that an accepted problem is published to everyone at once, with no early access for the proposer.
+        - label: 我理解题目如被采用，会对所有人同时公开，出题人也不会提前拿到题面、验证器或基线。 · I understand that an accepted problem is published to everyone at once, with no early access for the proposer.
           required: true

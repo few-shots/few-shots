@@ -156,6 +156,7 @@ class Problem:
     max_total_bytes: int
     params: dict
     dir: str = ""       # 题目目录名 <id>-<slug>；由 load_problem_dir 填写
+    proposal: int | None = None   # 这道题来自哪个出题帖（few-shots/few-shots 的 Issue 号）；题目上线后出题人得一杯酒水
 
     def file_limit(self, name: str) -> int:
         if name == "certificate.json":
@@ -213,6 +214,10 @@ def load_problem(path: str | os.PathLike) -> Problem:
     sandbox = d.get("sandbox", False)
     if type(sandbox) is not bool:
         raise ConfigError(bi("problem.toml: sandbox 必须是布尔值", "problem.toml: sandbox must be a boolean"))
+    proposal = d.get("proposal")
+    if proposal is not None and (type(proposal) is not int or not 1 <= proposal <= 10_000_000):
+        raise ConfigError(bi("problem.toml: proposal 必须是出题帖的 Issue 号（正整数）",
+                               "problem.toml: proposal must be the proposal's issue number (a positive integer)"))
     p = Problem(
         id=_cfg_str(d, "id", pattern=PROBLEM_ID_RE),
         slug=_cfg_str(d, "slug", pattern=SHOT_ID_RE),
@@ -235,6 +240,7 @@ def load_problem(path: str | os.PathLike) -> Problem:
         max_shot_md_bytes=_cfg_int(sub, "max_shot_md_bytes", 256, 1024 * 1024),
         max_total_bytes=_cfg_int(sub, "max_total_bytes", 1, 64 * 1024 * 1024),
         params=params,
+        proposal=proposal,
     )
     if p.progress_transform == "log2" and p.baseline <= 0:
         raise ConfigError(bi("problem.toml: progress_transform = log2 要求基线 > 0",

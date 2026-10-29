@@ -7,6 +7,7 @@ title_zh = "Golomb 尺（沙盒）"
 title_en = "Golomb ruler (sandbox)"
 kind = "certificate"              # 证书型题：参与者只提交数据，不提交代码
 sandbox = true                    # 沙盒题：成绩不进记分牌，不发奖励
+# proposal = 12                   # 来自出题帖时写上 Issue 号：题目上线后出题人得一杯酒水
 
 metric_zh = "长度"
 metric_en = "length"
