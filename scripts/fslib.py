@@ -156,7 +156,7 @@ class Problem:
     max_total_bytes: int
     params: dict
     dir: str = ""       # 题目目录名 <id>-<slug>；由 load_problem_dir 填写
-    proposal: int | None = None   # 这道题来自哪个出题帖（few-shots/few-shots 的 Issue 号）；题目上线后出题人得一杯酒水
+    proposal: int | None = None   # 这道题来自哪个出题帖（few-shots/few-shots 的 Issue 号）；题目公开后出题人得一杯酒水
 
     def file_limit(self, name: str) -> int:
         if name == "certificate.json":
