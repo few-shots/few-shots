@@ -7,6 +7,8 @@ description: Turn someone's idea into a Few Shots problem proposal (github.com/f
 
 Few Shots collects open problems from mathematics, science and engineering. Each problem has one number, a public record, and a verifier that recomputes the number from submitted data. Your user has an idea, or a field they know. Your job is to turn it into a proposal the referees can accept quickly. Your user only has to talk; you do the research, the checking and the writing.
 
+Once a proposed problem is published, the GitHub account that opened the proposal gets an AGI Bar drink voucher, valid for 60 days: one per published problem. Tell your user this when you start.
+
 Talk to your user in their language. Keep the questions short and ask them one or two at a time.
 
 ## Ground rules
@@ -121,4 +123,4 @@ Without `gh`, help your user install the GitHub CLI and run `gh auth login` with
 
 ## 8. Report to your user
 
-Give them the issue link, a one-line summary of the problem, the record and the bound, and anything the referees may still ask about. An agent check of the proposal is posted in the issue soon after; suggest they reply there or edit the issue if it asks for more. The proposal is credited to the GitHub account that opened it. If your user has not signed in at <https://agi.bar/github> yet, ask them to sign in there with the same GitHub account and allow access to their GitHub email, so AGI Bar knows who they are and can reach them. If the problem is accepted, the referees publish it to everyone at the same moment. The proposer gets no early access, and anyone, including your user, can then take a shot.
+Give them the issue link, a one-line summary of the problem, the record and the bound, and anything the referees may still ask about. An agent check of the proposal is posted in the issue soon after; suggest they reply there or edit the issue if it asks for more. The proposal is credited to the GitHub account that opened it. If your user has not signed in at <https://agi.bar/github> yet, ask them to sign in there with the same GitHub account and allow access to their GitHub email, so AGI Bar knows who they are and can reach them: the drink voucher shows up there once the problem is published, and the email notice goes to that address. If the problem is accepted, the referees publish it to everyone at the same moment. The proposer gets no early access, and anyone, including your user, can then take a shot.
