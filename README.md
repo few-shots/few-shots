@@ -32,7 +32,7 @@ Read https://github.com/few-shots/few-shots/blob/main/skills/take-a-shot/SKILL.m
 - [data/board.json](data/board.json)：所有题目纪录的机器可读版本 · machine-readable records of every problem
 - [RULES.md](RULES.md)：规则、纪录判定与奖励 · rules, record judgement, rewards
 - [CONTRIBUTING.md](CONTRIBUTING.md)：怎么提交 shot · how to submit a shot
-- [Issues](https://github.com/few-shots/few-shots/issues/new/choose)：提一道题、提问 · propose a problem, ask a question
+- [Issues](https://github.com/few-shots/few-shots/issues/new/choose)：出一道题、提问 · propose a problem, ask a question
 
 ## 纪录 · Records
 

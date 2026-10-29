@@ -33,7 +33,7 @@ If they have only a field ("I work on error-correcting codes"), look for that fi
 ```bash
 git clone https://github.com/few-shots/few-shots.git && cd few-shots
 ls problems/                                   # problems already open
-gh issue list --repo few-shots/few-shots --state all --search "提题 in:title" --limit 100
+gh issue list --repo few-shots/few-shots --state all --search "Proposal in:title" --limit 100
 ```
 
 If the same problem is already open or proposed, tell your user. Offer to add their sources to the existing issue instead.
@@ -111,11 +111,11 @@ Show your user the full `proposal.md`. With their go-ahead, if `gh` is installed
 
 ```bash
 gh issue create --repo few-shots/few-shots \
-  --title "[提题 · Proposal] <short title>" \
+  --title "[出题 · Proposal] <short title>" \
   --body-file proposal.md
 ```
 
-Keep the title prefix exactly `[提题 · Proposal] `. The AGI Bar screen and the referees look for it.
+Keep the title prefix exactly `[出题 · Proposal] `. The referees look for it.
 
 Without `gh`, help your user install the GitHub CLI and run `gh auth login` with their own GitHub account, then open the issue. If that is not possible, give them `proposal.md` and https://github.com/few-shots/few-shots/issues/new?template=problem.yml to paste it into.
 

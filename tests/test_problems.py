@@ -88,6 +88,22 @@ class ProblemDirsTest(unittest.TestCase):
         self.assertTrue(p.sandbox)
         self.assertIn("sandbox problem", (ROOT / "problems" / SANDBOX / "PROBLEM.md").read_text(encoding="utf-8"))
 
+    def test_proposal(self):
+        """proposal 选填：出题帖的 Issue 号；写错类型或范围直接报错。"""
+        import tempfile
+        from pathlib import Path
+        text = (ROOT / "problems" / SANDBOX / "problem.toml").read_text(encoding="utf-8")
+        self.assertIsNone(F.load_problem_dir(ROOT, SANDBOX).proposal)
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "problem.toml"
+            for value, ok in (("12", 12), ('"12"', None), ("0", None), ("true", None), ("1.5", None)):
+                path.write_text(text.replace("sandbox = true", f"sandbox = true\nproposal = {value}", 1), encoding="utf-8")
+                if ok is None:
+                    with self.assertRaises(F.ConfigError, msg=value):
+                        F.load_problem(path)
+                else:
+                    self.assertEqual(F.load_problem(path).proposal, ok)
+
     def test_load_problem_dir_rejects_bad_names(self):
         for bad in ("../p000-sandbox", "p000", "p000-sandbox/", "", "p001-sandbox"):
             with self.subTest(bad), self.assertRaises(F.ConfigError):

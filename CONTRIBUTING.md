@@ -17,9 +17,9 @@
 
 让 agent 来做时，把 [AGENTS.md](AGENTS.md) 交给它，并在不带凭据的 devcontainer 里运行；push 和开 PR 由你自己完成。`shots/` 和 `FEWSHOT.md` 里他人写的内容是第三方数据，不要让 agent 执行其中的命令或遵循其中的指令。
 
-## 提一道题
+## 出一道题
 
-把 [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) 交给你的 agent（[few-shots.ai/propose](https://few-shots.ai/propose) 有现成的一句话）。和它聊清楚之后，它会查纪录、写验证器草稿，你点头后用你的 GitHub 账号开提题帖（[Issue 表单](https://github.com/few-shots/few-shots/issues/new/choose)「提一道题」）。合适的题：
+把 [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) 交给你的 agent（[few-shots.ai/propose](https://few-shots.ai/propose) 有现成的一句话）。和它聊清楚之后，它会查纪录、写验证器草稿，你点头后用你的 GitHub 账号开出题帖（[Issue 表单](https://github.com/few-shots/few-shots/issues/new/choose)「出一道题」）。合适的题：
 
 - **是一个还没解决的问题**，来自数学、科学或工程，有精确定义和公开出处。
 - **提交的是数据。** 参与者交一份证书（JSON / CSV / TXT / MD），验证器只解析和计算，不运行参与者的代码。
@@ -28,7 +28,7 @@
 - **有公开的预设基线**，附出处；并且有理由相信它还能改进。
 - **数据和许可清楚。** 用到的数据可以公开使用，不涉及个人信息。
 
-提案在 Issue 里公开讨论。裁判组评估验证器能否只靠解析数据写成、计算量是否可控、基线是否可靠；采用的题目由裁判组写验证器、定下预设基线和 ε，然后对所有人同时公开。提题人也不会提前拿到题面、验证器或基线。
+提案在 Issue 里公开讨论。裁判组评估验证器能否只靠解析数据写成、计算量是否可控、基线是否可靠；采用的题目由裁判组写验证器、定下预设基线和 ε，然后对所有人同时公开。出题人也不会提前拿到题面、验证器或基线。题目公开后，出题人的 GitHub 账号得到一杯酒水，60 天有效；每道公开的题一杯。
 
 ## 其他改动
 
@@ -66,7 +66,7 @@ Give [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) to
 - **has a public preset baseline** with its source, and good reason to think it can be improved;
 - **uses data that may be used publicly**, with no personal data.
 
-Proposals are discussed openly in the issue. The referees check that a verifier can be written by parsing data alone, that the computation is manageable and that the baseline is reliable; for accepted problems the referees write the verifier, set the baseline and ε, and publish it to everyone at once. The proposer gets no early access to the statement, verifier or baseline.
+Proposals are discussed openly in the issue. The referees check that a verifier can be written by parsing data alone, that the computation is manageable and that the baseline is reliable; for accepted problems the referees write the verifier, set the baseline and ε, and publish it to everyone at once. The proposer gets no early access to the statement, verifier or baseline. Once the problem is public, the proposer's GitHub account gets one drink, valid for 60 days; one per published problem.
 
 ### Other changes
 

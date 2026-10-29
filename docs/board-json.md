@@ -28,6 +28,7 @@
 | `epsilon` | string | 最小改进幅度 ε，精确有理数文本 |
 | `epsilon_mode` | `"absolute"` 或 `"relative"` | relative 时，有效突破至少要改进 \|当前纪录\| × ε |
 | `progress_transform` | `"linear"` 或 `"log2"` | 进度的换算方式 |
+| `proposal` | number 或 `null` | 这道题来自哪个出题帖（本仓库的 Issue 号）；裁判组自己出的题为 `null` |
 | `current` | object 或 `null` | 当前纪录，即 `records` 的最后一条（不含 `shot` 字段）；还没有纪录时为 `null` |
 | `records` | array | 纪录链，按合并进 main 的先后排列 |
 | `progress` | string 或 `null` | 当前纪录相对预设基线的进度，单位为 `unit`，与机器人回帖中的"相对基线的进度"一致；没有纪录时为 `null` |
