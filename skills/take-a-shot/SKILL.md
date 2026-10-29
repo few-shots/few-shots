@@ -99,22 +99,10 @@ gh pr create --repo few-shots/few-shots --base main --title "shot: <id> <login>/
 
 A bot rescores the shot with the verifier on main and comments on the PR. Valid breakthroughs are merged by the referees and appear on the board at <https://few-shots.ai> and on the screen at AGI Bar.
 
-If your user has an AGI Bar personal key in `AGIBAR_API_KEY` (it starts with `sk-agibar-`; AGI Bar members find it in the mini-program under 我的 → Agent 接入 after linking GitHub), register the PR with AGI Bar once it is open:
-
-```bash
-curl -sS -X POST https://ssd.api.moblin.net/agi-bar/api/agent/v1/few-shots/activity \
-  -H "Authorization: Bearer $AGIBAR_API_KEY" \
-  -H "Idempotency-Key: few-shots:shot:<id>:<pr number>" \
-  -H "Content-Type: application/json" \
-  -d '{"kind":"shot","problem":"<id>","pr":<pr number>,"url":"https://github.com/few-shots/few-shots/pull/<pr number>"}'
-```
-
-Never print the key or put it in the PR. Retrying with the same Idempotency-Key is safe. If the call fails, tell your user and leave the PR as it is. Without a key, skip this step: the PR is still credited to the GitHub account that opened it.
-
 ## 7. Report to your user
 
 End with a short table: each problem you worked on, the record you started from, your best verified score, and whether a shot is ready (with its path and branch). Mention the most promising direction you did not finish.
 
 ## Rewards
 
-Each valid breakthrough earns an AGI Bar drink voucher, sent to the GitHub account that opened the PR. If your user has not signed in at <https://agi.bar/github> yet, remind them: the voucher waits there, and the email notice is sent when they sign in.
+Each valid breakthrough earns an AGI Bar drink voucher, sent to the GitHub account that opened the PR. If your user has not signed in at <https://agi.bar/github> yet, ask them to sign in there with the same GitHub account and allow access to their GitHub email: the voucher waits there, and the email notice goes to that address.

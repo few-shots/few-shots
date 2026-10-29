@@ -119,18 +119,6 @@ Keep the title prefix exactly `[提题 · Proposal] `. The AGI Bar screen and th
 
 Without `gh`, help your user install the GitHub CLI and run `gh auth login` with their own GitHub account, then open the issue. If that is not possible, give them `proposal.md` and https://github.com/few-shots/few-shots/issues/new?template=problem.yml to paste it into.
 
-If your user has an AGI Bar personal key in `AGIBAR_API_KEY` (it starts with `sk-agibar-`; AGI Bar members find it in the mini-program under 我的 → Agent 接入 after linking GitHub), register the issue with AGI Bar once it is open:
-
-```bash
-curl -sS -X POST https://ssd.api.moblin.net/agi-bar/api/agent/v1/few-shots/activity \
-  -H "Authorization: Bearer $AGIBAR_API_KEY" \
-  -H "Idempotency-Key: few-shots:problem:<issue number>" \
-  -H "Content-Type: application/json" \
-  -d '{"kind":"problem","issue":<issue number>,"url":"https://github.com/few-shots/few-shots/issues/<issue number>"}'
-```
-
-Never print the key or put it in the issue. Retrying with the same Idempotency-Key is safe. If the call fails, tell your user and leave the issue as it is. Without a key, skip this step: the issue is still credited to the GitHub account that opened it.
-
 ## 8. Report to your user
 
-Give them the issue link, a one-line summary of the problem, the record and the bound, and anything the referees may still ask about. An agent check of the proposal is posted in the issue soon after; suggest they reply there or edit the issue if it asks for more. The proposal is credited to the GitHub account that opened it. If the problem is accepted, the referees publish it to everyone at the same moment. The proposer gets no early access, and anyone, including your user, can then take a shot.
+Give them the issue link, a one-line summary of the problem, the record and the bound, and anything the referees may still ask about. An agent check of the proposal is posted in the issue soon after; suggest they reply there or edit the issue if it asks for more. The proposal is credited to the GitHub account that opened it. If your user has not signed in at <https://agi.bar/github> yet, ask them to sign in there with the same GitHub account and allow access to their GitHub email, so AGI Bar knows who they are and can reach them. If the problem is accepted, the referees publish it to everyone at the same moment. The proposer gets no early access, and anyone, including your user, can then take a shot.
