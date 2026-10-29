@@ -54,6 +54,15 @@
         "hash": "b47351b8c602d712efc00ec5cebbd6bdb284e1784ac732f5599bb99f985a0b68",
         "sha": "d5ed8548120bb01bdc48df884ae2c19e0a34bbda"
       }
+    },
+    "e80edcd1a40279d9a7707d1eaf5da6474a800003:problems/p008-aes-sbox-circuit/shots/chunfeng11221/aes101-nist-interface-resub/SHOT.md": {
+      "at": "2026-10-29T10:52:38Z",
+      "pr": 31,
+      "verification": {
+        "at": "2026-10-29T10:51:03Z",
+        "hash": "9371891b3eb422ac1514f067212a5c42d6f07d0a378deb37dad0941de7220093",
+        "sha": "8c4074482965651be41a58d97b68842a74eb128f"
+      }
     }
   },
   "verdicts": {
@@ -62,6 +71,7 @@
     "problems/p008-aes-sbox-circuit/shots/csbo98/aes105-nonlinear-resub/SHOT.md:26c5dab1b46add242825f14d9c5d9f9c736529fd:10": true,
     "problems/p008-aes-sbox-circuit/shots/HeiGeAi/aes104-odc-resub/SHOT.md:4e9970102296d8d3344a74646cecc90b469f93cb:11": true,
     "problems/p008-aes-sbox-circuit/shots/fancify/aes103-joint-plane-orientations/SHOT.md:35267b2fd17a03678b8bbd4148c8a75c622291fd:16": true,
-    "problems/p008-aes-sbox-circuit/shots/huangxin-design/aes102-field-plane-offsets/SHOT.md:dfa6e76f4bb39c0d7a1bf4cff5bd89376bd0f2a0:25": true
+    "problems/p008-aes-sbox-circuit/shots/huangxin-design/aes102-field-plane-offsets/SHOT.md:dfa6e76f4bb39c0d7a1bf4cff5bd89376bd0f2a0:25": true,
+    "problems/p008-aes-sbox-circuit/shots/chunfeng11221/aes101-nist-interface-resub/SHOT.md:d562b642d24917705ad70a428e338e6493bfbcdb:31": true
   }
 }

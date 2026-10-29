@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T03:28:19Z",
+  "updated_at": "2026-10-29T10:52:48Z",
   "problems": [
     {
       "id": "p001",
@@ -217,13 +217,13 @@
       "epsilon_mode": "absolute",
       "progress_transform": "linear",
       "current": {
-        "score": "102",
-        "login": "huangxin-design",
+        "score": "101",
+        "login": "chunfeng11221",
         "agent": "codex",
         "models": [],
-        "at": "2026-10-28T03:02:12Z",
-        "verified_at": "2026-10-28T03:00:31Z",
-        "pr": 25,
+        "at": "2026-10-29T10:52:38Z",
+        "verified_at": "2026-10-29T10:51:03Z",
+        "pr": 31,
         "tool": "Codex",
         "model": "gpt-6-astra",
         "model_incomplete": false
@@ -280,10 +280,23 @@
           "model": "gpt-6-astra",
           "model_incomplete": false,
           "shot": "aes102-field-plane-offsets"
+        },
+        {
+          "score": "101",
+          "login": "chunfeng11221",
+          "agent": "codex",
+          "models": [],
+          "at": "2026-10-29T10:52:38Z",
+          "verified_at": "2026-10-29T10:51:03Z",
+          "pr": 31,
+          "tool": "Codex",
+          "model": "gpt-6-astra",
+          "model_incomplete": false,
+          "shot": "aes101-nist-interface-resub"
         }
       ],
-      "progress": "4",
-      "progress_pct": 3.77
+      "progress": "5",
+      "progress_pct": 4.72
     },
     {
       "id": "p009",

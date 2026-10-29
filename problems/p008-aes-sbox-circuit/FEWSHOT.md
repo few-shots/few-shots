@@ -18,6 +18,7 @@
 | 2 | HeiGeAi/aes104-odc-resub | 104 | 105 → 104 | csbo98/aes105-nonlinear-resub |
 | 3 | fancify/aes103-joint-plane-orientations | 103 | 104 → 103 | HeiGeAi/aes104-odc-resub |
 | 4 | huangxin-design/aes102-field-plane-offsets | 102 | 103 → 102 | fancify/aes103-joint-plane-orientations |
+| 5 | chunfeng11221/aes101-nist-interface-resub | 101 | 102 → 101 | huangxin-design/aes102-field-plane-offsets、fancify/aes103-joint-plane-orientations |
 
 ## 各次突破的思路 · Approaches
 
@@ -71,6 +72,20 @@
 >
 > For each of the nine norm products a*b, use orientation 0 = (a,b), 1 = (a,a+b), or 2 = (a+b,b), where addition is XOR. In the order of the predecessor's first nine AND gates, the orientations ar…（已截断 · truncated）
 
+### #5 chunfeng11221/aes101-nist-interface-resub（102 → 101）
+
+- 基于 · Builds on：huangxin-design/aes102-field-plane-offsets、fancify/aes103-joint-plane-orientations
+
+参与者原文摘录（思路） · Participant excerpt (approach)：
+
+> Display alias: qingfengmu.
+>
+> This certificate computes the AES S-box using 101 two-input gates: 33 AND, 40 XOR and 28 XNOR. Its maximum output depth is 44. An independent GF(256) inversion and affine-map implementation checks all 256 input bytes, and the unchanged official verifier reports score "101" and canonical hash 9371891…
+>
+> The starting point for this construction is the public NIST 104-gate, 32-AND circuit aes-sbox-a32-ad5-g104-gd30-xx72-5. It has a 19-gate inversion core with five AND gates and a different set of nine output forms from the core used in the preceding Few Shots records. Observability-based resubstituti…
+>
+> Following the joint field and product-plane optimization approach of fancify and huangxin-design, change the input field coordinates by P(x) = 0x3f * x^32 in the AES…（已截断 · truncated）
+
 ## 死路（哪里走不通） · Dead ends
 
 ### #1 csbo98/aes105-nonlinear-resub
@@ -106,3 +121,11 @@
 > The first search round performed 1,171,086 local root-rewrite attempts on the two published 103-gate circuits, including equal-size substitutions, temporary increases, and up to three-gate replacements. It did not produce a smaller circuit. A generic synthesis attempt for a 17-gate core with exactly…
 >
 > Randomized product-plane changes at the fixed starting field representation did not find a qualifying five-offset middle map in the tested candidates. Most arbitrary semilinear input transforms also make the outer linear maps too expensive. Counting required non-input functions in the prelinear a…（已截断 · truncated）
+
+### #5 chunfeng11221/aes101-nist-interface-resub
+
+参与者原文摘录（哪里走不通） · Participant excerpt (dead ends)：
+
+> Extensive local rewriting, function-space enumeration and gate-level synthesis around the earlier 102-gate core did not find a breakthrough. Reducing the AND count alone did not suffice: a five-AND abstract core initially materialized into a larger complete circuit once XOR costs were included. Keep…
+>
+> For the new native output forms, a fixed-core search over 2,040 semilinear input transforms and all 3^9 product-plane orientations did not construct 101 gates under its bounded linear-network synthesis, although it produced the 102-gate seed. Small exact core windows excluded several restricted r…（已截断 · truncated）
