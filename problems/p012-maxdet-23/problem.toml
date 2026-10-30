@@ -1,0 +1,33 @@
+# Problem metadata. Only the referees can change this file (see .github/CODEOWNERS).
+# Scoring always uses this file as it is on main; changes to it in a PR have no effect.
+
+id = "p012"
+slug = "maxdet-23"
+title_zh = "23 阶 ±1 矩阵的最大行列式"
+title_en = "Maximal determinant of a 23×23 ±1 matrix"
+kind = "certificate"
+sandbox = false
+proposal = 41
+
+metric_zh = "行列式绝对值"
+metric_en = "absolute determinant"
+direction = "max"
+progress_unit = "单位"
+
+baseline_score = "2779447296000000"  # |det R| = 662671875 * 2^22, matrix R of the Orrick-Solomon page d23.html (archived 2019-12-28; credited there to Dowdeswell, Neubauer, Solomon, Tumer) and arXiv:math/0304410 (2003)
+baseline_kind = "certificate"     # baseline/certificate.json is that matrix R, parsed from the archived page
+epsilon = "4194304"               # 2^22: every 23x23 +-1 determinant is a multiple of 2^22, so this is the smallest possible step
+epsilon_mode = "absolute"
+progress_transform = "linear"
+
+verifier_timeout_sec = 60
+max_certificate_bytes = 65536
+
+[submission]
+max_files = 8
+max_file_bytes = 262144
+max_shot_md_bytes = 32768
+max_total_bytes = 524288
+
+[params]
+order = 23                        # the matrix is order x order
