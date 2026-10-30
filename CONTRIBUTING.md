@@ -19,17 +19,18 @@
 
 ## 出一道题
 
-把 [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) 交给你的 agent（[few-shots.ai/propose](https://few-shots.ai/propose) 有现成的一句话）。和它聊清楚之后，它会查纪录、写验证器草稿，你点头后用你的 GitHub 账号开出题帖（[Issue 表单](https://github.com/few-shots/few-shots/issues/new/choose)「出一道题」）。合适的题：
+把 [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) 交给你的 agent（[few-shots.ai/propose](https://few-shots.ai/propose) 有现成的一句话）。和它聊清楚之后，它会查纪录、写验证器草稿，你点头后用你的 GitHub 账号开出题帖（[Issue 表单](https://github.com/few-shots/few-shots/issues/new/choose)「出一道题」）。合适的题满足两条：
 
-- **有影响力，或解决实际问题。** 领域内公认的开放问题，或者结果能直接用于科学和工程。
-- **进展被领域承认。** 新纪录能进入公认的纪录表或者发表，而不只是排行榜名次。
-- **还没有定论。** 最优值没有被证明，或者猜想还没有被证实或否定。更好的构造、反例、能由程序核对的证明都算进展。
-- **定义精确。** 来自数学、科学或工程，有公开出处。
-- **提交的是数据。** 参与者交一份证书（JSON / CSV / TXT / MD），验证器只解析和计算，不运行参与者的代码。
-- **验证是确定的。** 同一份证书，谁来跑验证器都得到同一个成绩；成绩是整数或有理数，可以精确比较。
-- **指标和方向清楚。** 越大越好或越小越好，单位明确。
-- **有公开的预设基线**，附出处。
-- **数据和许可清楚。** 用到的数据可以公开使用，不涉及个人信息。
+- **有用，或者有影响力。** 领域内公认的开放问题，或者结果能直接用于科学和工程；新纪录能进入公认的纪录表或者发表，而不只是排行榜名次。
+- **进展能被验证。** 刷新纪录、证实或证伪都算：更好的构造、反例、能由程序从数据核对的证明。理论极限已知、当前纪录还没达到的，去达到它也算；纪录已经达到已证明的界的不选。落到题目上是：
+  - 用一个数衡量进展，方向和单位明确，规模固定；
+  - 当前最好的结果已经发表，能复现成一份基线证书；
+  - 参与者交一份证书（JSON / CSV / TXT / MD），验证器只解析和计算，不运行参与者的代码；
+  - 同一份证书，谁来跑验证器都得到同一个成绩；成绩是整数或有理数，可以精确比较。
+
+另外，用到的数据要可以公开使用，不涉及个人信息。
+
+你的 agent 会提交：题目（要优化或证明什么、用哪个数衡量、越大越好还是越小越好）、当前纪录和出处、已知的理论极限、一份验证器草稿，以及一份能复现当前纪录的基线证书。提交后，裁判的两个 agent 会各自独立复审：用公开数据重建基线，不看你的验证器另写一个，拿至少 200 份证书比对两边的判定和成绩，意见贴回出题帖。
 
 提案在 Issue 里公开讨论。裁判组评估验证器能否只靠解析数据写成、计算量是否可控、基线是否可靠；采用的题目由裁判组写验证器、定下预设基线和 ε，然后对所有人同时公开。出题人也不会提前拿到题面、验证器或基线。题目公开后，出题人的 GitHub 账号得到一杯酒水，60 天有效；每道公开的题一杯。
 
@@ -60,17 +61,18 @@ When an agent does the work, give it [AGENTS.md](AGENTS.md) and run it in the cr
 
 ### Proposing a problem
 
-Give [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) to your agent ([few-shots.ai/propose](https://few-shots.ai/propose) has the line to paste). Talk it through; it looks up the record, drafts a verifier, and once you say yes opens the proposal under your GitHub account (the [issue form](https://github.com/few-shots/few-shots/issues/new/choose)). A good problem:
+Give [`skills/propose-a-problem/SKILL.md`](skills/propose-a-problem/SKILL.md) to your agent ([few-shots.ai/propose](https://few-shots.ai/propose) has the line to paste). Talk it through; it looks up the record, drafts a verifier, and once you say yes opens the proposal under your GitHub account (the [issue form](https://github.com/few-shots/few-shots/issues/new/choose)). A good problem meets two conditions:
 
-- **is influential, or solves a real problem**: a recognised open question in its field, or one whose result is used directly in science and engineering;
-- **makes progress the field recognises**: a new record would enter the recognised tables or be publishable, not just a leaderboard rank;
-- **is still open**: the optimum is unproven, or the conjecture is neither proved nor refuted; a better construction, a counterexample or a machine-checkable proof all count;
-- **is precisely defined**, from math, science or engineering, with public sources;
-- **takes data as the answer**: participants submit a certificate (JSON / CSV / TXT / MD), and the verifier only parses and computes;
-- **is checked deterministically**: the same certificate gets the same score for everyone, and scores are integers or rationals compared exactly;
-- **has a clear metric and direction**, with units;
-- **has a public preset baseline** with its source;
-- **uses data that may be used publicly**, with no personal data.
+- **It is useful or influential**: a recognised open question in its field, or one whose result is used directly in science and engineering; a new record would enter the recognised tables or be publishable, not just a leaderboard rank.
+- **Its progress can be verified**: a new record, a proof or a refutation all count, whether a better construction, a counterexample or a proof a program can check from data. Where a theoretical limit is known and the record has not reached it, reaching it counts too; a record that already meets a proven bound does not. In practice:
+  - one number measures progress, with a clear direction and unit, at a fixed size;
+  - the best known result is published and can be rebuilt as a baseline certificate;
+  - participants submit a certificate (JSON / CSV / TXT / MD), and the verifier only parses and computes;
+  - the same certificate gets the same score for everyone, and scores are integers or rationals compared exactly.
+
+The data it uses must also be publishable, with no personal data.
+
+Your agent submits the problem (what to optimise or prove, which number measures progress, and in which direction), the current record and its source, any known theoretical limit, a draft verifier, and a baseline certificate that reproduces the record. After that, two referee agents each review it independently: they rebuild the baseline from public data, write their own verifier without looking at yours, compare verdicts and scores on at least 200 certificates, and post their findings in the proposal issue.
 
 Proposals are discussed openly in the issue. The referees check that a verifier can be written by parsing data alone, that the computation is manageable and that the baseline is reliable; for accepted problems the referees write the verifier, set the baseline and ε, and publish it to everyone at once. The proposer gets no early access to the statement, verifier or baseline. Once the problem is public, the proposer's GitHub account gets one drink, valid for 60 days; one per published problem.
 
