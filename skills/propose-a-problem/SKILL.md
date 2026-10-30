@@ -53,16 +53,15 @@ Prefer primary sources: the paper, the maintained record table or the benchmark 
 
 ## 4. Check the criteria
 
-A good Few Shots problem meets all of these. Write one line of evidence for each.
+A good Few Shots problem meets two conditions: it is useful or influential, and its progress can be verified. The rows below spell them out; write one line of evidence for each.
 
 | Criterion | What to check |
 | --- | --- |
-| Influential, or solves a real problem | A recognised open question in its field, or one whose result is used directly in science or engineering |
-| Progress the field recognises | A new record would be accepted as a result in the field, for example in a record table or a paper, not just a leaderboard rank |
-| Still open | The optimum is unproven, or the conjecture is neither proved nor refuted. A better construction, a counterexample or a proof the verifier can check from data all count. A record that has stood for years still counts; one already proven optimal does not |
-| Precisely defined | One number measures progress, with a clear direction and unit, at a fixed size |
-| Published record | The best known result is published and can be rebuilt as a baseline certificate (section 3) |
-| Checked exactly by a program | The answer is data. A Python standard-library program checks it exactly within seconds. The score is an integer or an exact rational. No SAT solver, no floating-point tolerance, no proof outside the data |
+| 1. Useful or influential | A recognised open question in its field, or one whose result is used directly in science or engineering. A new record would be accepted as a result in the field, for example in a record table or a paper, not just a leaderboard rank |
+| 2. Progress can be verified | A new record, a proof or a refutation all count: a better construction, a counterexample, or a proof the verifier can check from data. Where a theoretical limit is known and the record has not reached it, reaching it counts too. A record that has stood for years still counts; one that already meets a proven bound does not |
+| 2a. Precisely defined | One number measures progress, with a clear direction and unit, at a fixed size |
+| 2b. Published record | The best known result is published and can be rebuilt as a baseline certificate (section 3) |
+| 2c. Checked exactly by a program | The answer is data. A Python standard-library program checks it exactly within seconds. The score is an integer or an exact rational. No SAT solver, no floating-point tolerance, no proof outside the data |
 | Data and licence | The data needed may be published, and there is no personal data |
 
 If a criterion fails, tell your user which one and why. Often a variant passes, for example a fixed instance size, or an exact rational score instead of a floating-point one. Suggest it, and stop if there is none.
