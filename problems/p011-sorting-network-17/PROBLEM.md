@@ -21,7 +21,7 @@ Find a sorting network on 17 channels with as few comparators as possible. The s
 
 The score is an integer, so the next possible score below the baseline is 70.
 
-The least possible number S(17) is not known. The upper bound 71 is the baseline below. Lower bounds: S(12) = 39 ([Harder, arXiv:2012.04400](https://arxiv.org/abs/2012.04400)) and the bound S(n) ≥ S(n − 1) + ⌈log₂ n⌉ of Van Voorhis, restated as Lemma 17 in [Harder](https://arxiv.org/html/2012.04400v2#S3.SS1), give S(17) ≥ 39 + 4 + 4 + 4 + 4 + 5 = 60. [Dobbelaere's table](https://bertdobbelaere.github.io/sorting_networks.html#N17L71D12) lists the lower bound 63 (update of 2025-04-21), and a preprint ([Tomar, 2026](https://hexagonmath.org/2610.00549)) claims 64; neither proof is checked here. These bounds play no part in scoring.
+The least possible number S(17) is not known. The upper bound 71 is the baseline below. Lower bounds: S(12) = 39 ([Harder, arXiv:2012.04400](https://arxiv.org/abs/2012.04400)) and the bound S(n) ≥ S(n − 1) + ⌈log₂ n⌉ of Van Voorhis, restated as Lemma 17 in [Harder](https://arxiv.org/html/2012.04400v2#S3.SS1), give S(17) ≥ 39 + 4 + 4 + 4 + 4 + 5 = 60. [Dobbelaere's table](https://bertdobbelaere.github.io/sorting_networks.html#N17L71D12) lists the lower bound 63 (updated in 2025), and a preprint ([Tomar, 2026](https://hexagonmath.org/2610.00549)) claims 64; neither proof is checked here. These bounds play no part in scoring.
 
 ## Why it matters
 
