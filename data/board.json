@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T13:22:04Z",
+  "updated_at": "2026-10-30T13:44:20Z",
   "problems": [
     {
       "id": "p001",
@@ -367,6 +367,28 @@
       "epsilon_mode": "absolute",
       "progress_transform": "linear",
       "proposal": 40,
+      "current": null,
+      "records": [],
+      "progress": null,
+      "progress_pct": 0.0
+    },
+    {
+      "id": "p012",
+      "slug": "maxdet-23",
+      "dir": "problems/p012-maxdet-23",
+      "title_zh": "23 阶 ±1 矩阵的最大行列式",
+      "title_en": "Maximal determinant of a 23×23 ±1 matrix",
+      "repo": "few-shots/few-shots",
+      "url": "https://github.com/few-shots/few-shots/tree/main/problems/p012-maxdet-23",
+      "metric_zh": "行列式绝对值",
+      "metric_en": "absolute determinant",
+      "direction": "max",
+      "unit": "单位",
+      "baseline": "2779447296000000",
+      "epsilon": "4194304",
+      "epsilon_mode": "absolute",
+      "progress_transform": "linear",
+      "proposal": 41,
       "current": null,
       "records": [],
       "progress": null,

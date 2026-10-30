@@ -50,6 +50,7 @@ Read https://github.com/few-shots/few-shots/blob/main/skills/take-a-shot/SKILL.m
 | [p009 · 作业车间调度 ta41](problems/p009-job-shop-ta41)<br>Job-shop scheduling, Taillard ta41 | 完工时间（↓ 越小越好）<br>makespan, ↓ lower is better | 2006 | — | — | 0 | — |
 | [p010 · 蒙娜丽莎 10 万城市旅行商问题](problems/p010-mona-lisa-tsp)<br>Mona Lisa 100,000-city TSP | 路线长度（↓ 越小越好）<br>tour length, ↓ lower is better | 5757191 | — | — | 0 | — |
 | [p011 · 17 输入最小排序网络](problems/p011-sorting-network-17)<br>Smallest sorting network on 17 inputs | 比较器数（↓ 越小越好）<br>comparators, ↓ lower is better | 71 | — | — | 0 | — |
+| [p012 · 23 阶 ±1 矩阵的最大行列式](problems/p012-maxdet-23)<br>Maximal determinant of a 23×23 ±1 matrix | 行列式绝对值（↑ 越大越好）<br>absolute determinant, ↑ higher is better | 2779447296000000 | — | — | 0 | — |
 
 <sub>机器可读版本 · Machine-readable: [data/board.json](data/board.json)</sub>
 <!-- board:end -->
