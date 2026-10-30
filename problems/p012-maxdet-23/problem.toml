@@ -14,7 +14,7 @@ metric_en = "absolute determinant"
 direction = "max"
 progress_unit = "单位"
 
-baseline_score = "2779447296000000"  # |det R| = 662671875 * 2^22, matrix R of the Orrick-Solomon page d23.html (archived 2019-12-28; credited there to Dowdeswell, Neubauer, Solomon, Tumer) and arXiv:math/0304410 (2003)
+baseline_score = "2779447296000000"  # |det R| = 662671875 * 2^22, matrix R of the Orrick-Solomon page d23.html (archived in 2019; credited there to Dowdeswell, Neubauer, Solomon, Tumer) and arXiv:math/0304410 (2003)
 baseline_kind = "certificate"     # baseline/certificate.json is that matrix R, parsed from the archived page
 epsilon = "4194304"               # 2^22: every 23x23 +-1 determinant is a multiple of 2^22, so this is the smallest possible step
 epsilon_mode = "absolute"
