@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T15:29:48Z",
+  "updated_at": "2026-10-30T13:22:04Z",
   "problems": [
     {
       "id": "p001",
@@ -345,6 +345,28 @@
       "epsilon_mode": "absolute",
       "progress_transform": "linear",
       "proposal": null,
+      "current": null,
+      "records": [],
+      "progress": null,
+      "progress_pct": 0.0
+    },
+    {
+      "id": "p011",
+      "slug": "sorting-network-17",
+      "dir": "problems/p011-sorting-network-17",
+      "title_zh": "17 输入最小排序网络",
+      "title_en": "Smallest sorting network on 17 inputs",
+      "repo": "few-shots/few-shots",
+      "url": "https://github.com/few-shots/few-shots/tree/main/problems/p011-sorting-network-17",
+      "metric_zh": "比较器数",
+      "metric_en": "comparators",
+      "direction": "min",
+      "unit": "个比较器",
+      "baseline": "71",
+      "epsilon": "1",
+      "epsilon_mode": "absolute",
+      "progress_transform": "linear",
+      "proposal": 40,
       "current": null,
       "records": [],
       "progress": null,
