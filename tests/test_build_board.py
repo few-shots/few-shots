@@ -381,7 +381,9 @@ class CommittedStateTest(unittest.TestCase):
         self.assertEqual(bb.dump_json(board), (ROOT / "data" / "board.json").read_text("utf-8"))
         self.assertEqual(bb.dump_json(cache), (ROOT / "data" / "cache.json").read_text("utf-8"))
         self.assertEqual(readme, (ROOT / "README.md").read_text("utf-8"))
-        self.assertEqual([p["id"] for p in board["problems"]], [f"p{i:03d}" for i in range(1, 11)])  # 沙盒题不在里面
+        public = [p.id for p in (F.load_problem_dir(ROOT, d) for d in F.list_problem_dirs(ROOT)) if not p.sandbox]
+        self.assertEqual([p["id"] for p in board["problems"]], sorted(public))  # 沙盒题不在里面；新开的题自动算进来
+        self.assertGreaterEqual(len(public), 10)
         region = readme[readme.index(bb.BOARD_START):readme.index(bb.BOARD_END)]
         self.assertIn(bb.TABLE_HEAD[0], region)
         self.assertNotRegex(region, r"20[0-9]{2}-[01][0-9]-[0-3][0-9]")
