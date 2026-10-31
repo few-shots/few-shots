@@ -104,6 +104,27 @@ class ProblemDirsTest(unittest.TestCase):
                 else:
                     self.assertEqual(F.load_problem(path).proposal, ok)
 
+    def test_proposer(self):
+        """proposer 选填：出题帖作者的 GitHub 账号，要和 proposal 一起写。"""
+        import tempfile
+        from pathlib import Path
+        text = (ROOT / "problems" / SANDBOX / "problem.toml").read_text(encoding="utf-8")
+        self.assertIsNone(F.load_problem_dir(ROOT, SANDBOX).proposer)
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "problem.toml"
+            cases = (('proposal = 12\nproposer = "huangxin-design"', "huangxin-design"),
+                     ('proposer = "huangxin-design"', None),                 # 没有 proposal
+                     ('proposal = 12\nproposer = "-bad"', None),
+                     ('proposal = 12\nproposer = "a/b"', None),
+                     ('proposal = 12\nproposer = 7', None))
+            for extra, ok in cases:
+                path.write_text(text.replace("sandbox = true", f"sandbox = true\n{extra}", 1), encoding="utf-8")
+                if ok is None:
+                    with self.assertRaises(F.ConfigError, msg=extra):
+                        F.load_problem(path)
+                else:
+                    self.assertEqual(F.load_problem(path).proposer, ok)
+
     def test_load_problem_dir_rejects_bad_names(self):
         for bad in ("../p000-sandbox", "p000", "p000-sandbox/", "", "p001-sandbox"):
             with self.subTest(bad), self.assertRaises(F.ConfigError):

@@ -157,6 +157,7 @@ class Problem:
     params: dict
     dir: str = ""       # 题目目录名 <id>-<slug>；由 load_problem_dir 填写
     proposal: int | None = None   # 这道题来自哪个出题帖（few-shots/few-shots 的 Issue 号）；题目公开后出题人得一杯酒水
+    proposer: str | None = None   # 出题帖作者的 GitHub 账号：网站排行「贡献题目」记在这个账号名下；要和 proposal 一起写
 
     def file_limit(self, name: str) -> int:
         if name == "certificate.json":
@@ -172,6 +173,7 @@ class Problem:
     @property
     def direction_en(self) -> str:
         return "higher is better" if self.direction == "max" else "lower is better"
+
 
 
 def _cfg_str(d: dict, key: str, *, pattern=None, choices=None, max_len=200) -> str:
@@ -218,6 +220,13 @@ def load_problem(path: str | os.PathLike) -> Problem:
     if proposal is not None and (type(proposal) is not int or not 1 <= proposal <= 10_000_000):
         raise ConfigError(bi("problem.toml: proposal 必须是出题帖的 Issue 号（正整数）",
                                "problem.toml: proposal must be the proposal's issue number (a positive integer)"))
+    proposer = d.get("proposer")
+    if proposer is not None and (not isinstance(proposer, str) or not LOGIN_RE.fullmatch(proposer)):
+        raise ConfigError(bi("problem.toml: proposer 必须是出题帖作者的 GitHub 账号",
+                               "problem.toml: proposer must be the GitHub login of the proposal's author"))
+    if proposer is not None and proposal is None:
+        raise ConfigError(bi("problem.toml: 写了 proposer 就要写 proposal（出题帖的 Issue 号）",
+                               "problem.toml: proposer needs proposal (the proposal's issue number)"))
     p = Problem(
         id=_cfg_str(d, "id", pattern=PROBLEM_ID_RE),
         slug=_cfg_str(d, "slug", pattern=SHOT_ID_RE),
@@ -241,6 +250,7 @@ def load_problem(path: str | os.PathLike) -> Problem:
         max_total_bytes=_cfg_int(sub, "max_total_bytes", 1, 64 * 1024 * 1024),
         params=params,
         proposal=proposal,
+        proposer=proposer,
     )
     if p.progress_transform == "log2" and p.baseline <= 0:
         raise ConfigError(bi("problem.toml: progress_transform = log2 要求基线 > 0",

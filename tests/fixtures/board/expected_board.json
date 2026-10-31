@@ -18,6 +18,7 @@
       "epsilon_mode": "absolute",
       "progress_transform": "linear",
       "proposal": null,
+      "proposer": null,
       "current": {
         "score": "15",
         "login": "mallory",
@@ -117,6 +118,7 @@
       "epsilon_mode": "relative",
       "progress_transform": "log2",
       "proposal": null,
+      "proposer": null,
       "current": {
         "score": "243/5",
         "login": "kim",
@@ -198,6 +200,7 @@
       "epsilon_mode": "absolute",
       "progress_transform": "linear",
       "proposal": null,
+      "proposer": null,
       "current": null,
       "records": [],
       "progress": null,
