@@ -8,6 +8,7 @@ title_en = "Maximal determinant of a 23×23 ±1 matrix"
 kind = "certificate"
 sandbox = false
 proposal = 41
+proposer = "pedestrian6"
 
 metric_zh = "行列式绝对值"
 metric_en = "absolute determinant"

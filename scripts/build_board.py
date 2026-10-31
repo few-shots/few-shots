@@ -491,6 +491,7 @@ def problem_entry(root: Path, pdir: str, source: Source, cache_in: dict, cache_o
         "epsilon_mode": problem.epsilon_mode,
         "progress_transform": problem.progress_transform,
         "proposal": problem.proposal,
+        "proposer": problem.proposer,
         "current": shot_json(records[-1], with_shot=False) if records else None,
         "records": [shot_json(r, with_shot=True) for r in records],
         "progress": prog,

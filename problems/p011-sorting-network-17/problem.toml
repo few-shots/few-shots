@@ -8,6 +8,7 @@ title_en = "Smallest sorting network on 17 inputs"
 kind = "certificate"
 sandbox = false
 proposal = 40
+proposer = "huangxin-design"
 
 metric_zh = "比较器数"
 metric_en = "comparators"
