@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T04:28:31Z",
+  "updated_at": "2026-11-01T08:28:56Z",
   "problems": [
     {
       "id": "p001",
@@ -423,6 +423,29 @@
       "epsilon_mode": "absolute",
       "progress_transform": "linear",
       "proposal": 47,
+      "proposer": "pedestrian6",
+      "current": null,
+      "records": [],
+      "progress": null,
+      "progress_pct": 0.0
+    },
+    {
+      "id": "p014",
+      "slug": "golomb-ruler-29",
+      "dir": "problems/p014-golomb-ruler-29",
+      "title_zh": "最短 29 阶 Golomb 尺",
+      "title_en": "Shortest 29-mark Golomb ruler",
+      "repo": "few-shots/few-shots",
+      "url": "https://github.com/few-shots/few-shots/tree/main/problems/p014-golomb-ruler-29",
+      "metric_zh": "长度",
+      "metric_en": "length",
+      "direction": "min",
+      "unit": "格",
+      "baseline": "623",
+      "epsilon": "1",
+      "epsilon_mode": "absolute",
+      "progress_transform": "linear",
+      "proposal": 49,
       "proposer": "pedestrian6",
       "current": null,
       "records": [],
