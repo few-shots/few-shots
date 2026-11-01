@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T01:35:26Z",
+  "updated_at": "2026-11-01T04:28:31Z",
   "problems": [
     {
       "id": "p001",
@@ -400,6 +400,29 @@
       "epsilon_mode": "absolute",
       "progress_transform": "linear",
       "proposal": 41,
+      "proposer": "pedestrian6",
+      "current": null,
+      "records": [],
+      "progress": null,
+      "progress_pct": 0.0
+    },
+    {
+      "id": "p013",
+      "slug": "maxdet-29",
+      "dir": "problems/p013-maxdet-29",
+      "title_zh": "29 阶 ±1 矩阵的最大行列式",
+      "title_en": "Maximal determinant of a 29×29 ±1 matrix",
+      "repo": "few-shots/few-shots",
+      "url": "https://github.com/few-shots/few-shots/tree/main/problems/p013-maxdet-29",
+      "metric_zh": "行列式绝对值",
+      "metric_en": "absolute determinant",
+      "direction": "max",
+      "unit": "单位",
+      "baseline": "1188957517256767569920",
+      "epsilon": "268435456",
+      "epsilon_mode": "absolute",
+      "progress_transform": "linear",
+      "proposal": 47,
       "proposer": "pedestrian6",
       "current": null,
       "records": [],
