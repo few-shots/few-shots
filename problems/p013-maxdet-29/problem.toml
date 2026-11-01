@@ -1,0 +1,37 @@
+# 题目元数据，机器可读，以这份为准。只有裁判组能改（见 .github/CODEOWNERS）。
+# 打分永远使用 main 上的这份文件；PR 里对它的任何改动都不会影响打分。
+
+id = "p013"                       # 题号：p + 三到六位数字；目录名为 <id>-<slug>
+slug = "maxdet-29"                # 小写字母、数字、连字符
+title_zh = "29 阶 ±1 矩阵的最大行列式"
+title_en = "Maximal determinant of a 29×29 ±1 matrix"
+kind = "certificate"              # 证书型题：参与者只提交数据，不提交代码
+sandbox = false                   # 正式题：成绩进记分牌
+proposal = 47                     # 出题帖 few-shots/few-shots#47
+proposer = "pedestrian6"          # 出题帖作者的 GitHub 账号，网站排行「贡献题目」记在他名下
+
+metric_zh = "行列式绝对值"
+metric_en = "absolute determinant"
+direction = "max"                 # max 越大越好
+progress_unit = "单位"            # 记分牌上的进度单位
+
+# 预设基线：|det R| = 320 * 7^12 * 2^28 = 4429211904320 * 2^28，R 是 Orrick-Solomon 纪录表 d29.html
+# （Wayback Machine 2019 年快照；页面记为 Bruce Solomon 2002 年报告）上印出的 29 阶矩阵，
+# 也是 arXiv:math/0304410（2003）摘要里的 n = 29 新纪录、Brent-Orrick-Osborn-Zimmermann（2011）Table 1 的下界
+baseline_score = "1188957517256767569920"
+baseline_kind = "certificate"     # baseline/certificate.json 就是这个矩阵 R，从存档页面逐字解析
+epsilon = "268435456"             # 2^28：29 阶 ±1 矩阵的行列式都是 2^28 的倍数，这是能区分的最小一步
+epsilon_mode = "absolute"         # absolute | relative（relative 时幅度为 |当前纪录| × ε）
+progress_transform = "linear"     # linear | log2（log2 要求基线与成绩都 > 0）
+
+verifier_timeout_sec = 60         # 单次验证的硬超时（秒）
+max_certificate_bytes = 65536     # certificate.json 的大小上限（字节）
+
+[submission]                      # 门禁对 PR 文件的限制
+max_files = 8                     # 一个 shot 目录最多几个文件
+max_file_bytes = 262144           # 除 certificate.json 和 SHOT.md 外，单个文件的上限
+max_shot_md_bytes = 32768         # SHOT.md 的上限
+max_total_bytes = 524288          # 一个 shot 的总大小上限
+
+[params]                          # 只给验证器用的题目参数
+order = 29                        # 矩阵阶数：order x order
