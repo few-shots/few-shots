@@ -1,0 +1,38 @@
+# 题目元数据，机器可读，以这份为准。只有裁判组能改（见 .github/CODEOWNERS）。
+# 打分永远使用 main 上的这份文件；PR 里对它的任何改动都不会影响打分。
+
+id = "p014"                       # 题号：p + 三到六位数字；目录名为 <id>-<slug>
+slug = "golomb-ruler-29"          # 小写字母、数字、连字符
+title_zh = "最短 29 阶 Golomb 尺"
+title_en = "Shortest 29-mark Golomb ruler"
+kind = "certificate"              # 证书型题：参与者只提交数据，不提交代码
+sandbox = false                   # 正式题：成绩进记分牌
+proposal = 49                     # 出题帖 few-shots/few-shots#49
+proposer = "pedestrian6"          # 出题帖作者的 GitHub 账号，网站排行「贡献题目」记在他名下
+
+metric_zh = "长度"
+metric_en = "length"
+direction = "min"                 # min 越小越好
+progress_unit = "格"              # 记分牌上的进度单位
+
+# 预设基线：长度 623，Singer（1938）射影平面构造 q = 29（模 871 的 30 元完全差集，乘子变换后截取 29 个循环相邻刻度）。
+# Shearer 约 1986 年的构造表（IBM 研究站，原页面已下线）覆盖到 160 阶；Rokicki-Dogon《Larger Golomb Rulers》
+# （G4G12 赠刊，PDF 为 2016 年）称这些构造给出 16 阶以上全部已知最好的尺。两份复审都从公开构造独立重建出同一把尺。
+baseline_score = "623"
+baseline_kind = "certificate"     # baseline/certificate.json 就是这把尺，由 Singer 构造重算，不含第三方数据文件
+epsilon = "1"                     # 长度是整数，能区分的最小一步是 1
+epsilon_mode = "absolute"         # absolute | relative（relative 时幅度为 |当前纪录| × ε）
+progress_transform = "linear"     # linear | log2（log2 要求基线与成绩都 > 0）
+
+verifier_timeout_sec = 60         # 单次验证的硬超时（秒）
+max_certificate_bytes = 65536     # certificate.json 的大小上限（字节）
+
+[submission]                      # 门禁对 PR 文件的限制
+max_files = 8                     # 一个 shot 目录最多几个文件
+max_file_bytes = 262144           # 除 certificate.json 和 SHOT.md 外，单个文件的上限
+max_shot_md_bytes = 32768         # SHOT.md 的上限
+max_total_bytes = 524288          # 一个 shot 的总大小上限
+
+[params]                          # 只给验证器用的题目参数
+order = 29                        # 刻度个数
+max_mark = 1000000000000000       # 刻度上限 10^15：每个刻度是 0 .. 10^15 之间的整数

@@ -52,6 +52,7 @@ Read https://github.com/few-shots/few-shots/blob/main/skills/take-a-shot/SKILL.m
 | [p011 · 17 输入最小排序网络](problems/p011-sorting-network-17)<br>Smallest sorting network on 17 inputs | 比较器数（↓ 越小越好）<br>comparators, ↓ lower is better | 71 | — | — | 0 | — |
 | [p012 · 23 阶 ±1 矩阵的最大行列式](problems/p012-maxdet-23)<br>Maximal determinant of a 23×23 ±1 matrix | 行列式绝对值（↑ 越大越好）<br>absolute determinant, ↑ higher is better | 2779447296000000 | — | — | 0 | — |
 | [p013 · 29 阶 ±1 矩阵的最大行列式](problems/p013-maxdet-29)<br>Maximal determinant of a 29×29 ±1 matrix | 行列式绝对值（↑ 越大越好）<br>absolute determinant, ↑ higher is better | 1188957517256767569920 | — | — | 0 | — |
+| [p014 · 最短 29 阶 Golomb 尺](problems/p014-golomb-ruler-29)<br>Shortest 29-mark Golomb ruler | 长度（↓ 越小越好）<br>length, ↓ lower is better | 623 | — | — | 0 | — |
 
 <sub>机器可读版本 · Machine-readable: [data/board.json](data/board.json)</sub>
 <!-- board:end -->
