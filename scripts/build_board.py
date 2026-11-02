@@ -114,6 +114,16 @@ def commit_time(root: Path, sha: str) -> str:
     return iso_utc(_git(root, "show", "-s", "--format=%cI", sha).strip())
 
 
+def opened_at(root: Path, ref: str, pdir: str) -> str | None:
+    """题目公开的时刻：它的 problem.toml 第一次出现在 main 第一父链上的那个提交（开题 PR 的合并）。读不到 git 历史时为 None。"""
+    try:
+        out = _git(root, "log", "--first-parent", "--diff-filter=A", "--format=%cI", ref, "--",
+                   f"{F.PROBLEMS_DIR}/{pdir}/problem.toml").split()
+    except BoardError:
+        return None
+    return iso_utc(out[-1]) if out else None
+
+
 # ---------- 读 GitHub（只读） ----------
 
 class Source(Protocol):
@@ -492,6 +502,7 @@ def problem_entry(root: Path, pdir: str, source: Source, cache_in: dict, cache_o
         "progress_transform": problem.progress_transform,
         "proposal": problem.proposal,
         "proposer": problem.proposer,
+        "opened_at": opened_at(root, ref, pdir),
         "current": shot_json(records[-1], with_shot=False) if records else None,
         "records": [shot_json(r, with_shot=True) for r in records],
         "progress": prog,

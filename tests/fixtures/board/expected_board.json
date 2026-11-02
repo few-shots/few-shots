@@ -19,6 +19,7 @@
       "progress_transform": "linear",
       "proposal": null,
       "proposer": null,
+      "opened_at": "2001-01-01T00:01:00Z",
       "current": {
         "score": "15",
         "login": "mallory",
@@ -119,6 +120,7 @@
       "progress_transform": "log2",
       "proposal": null,
       "proposer": null,
+      "opened_at": "2001-01-01T00:01:00Z",
       "current": {
         "score": "243/5",
         "login": "kim",
@@ -201,6 +203,7 @@
       "progress_transform": "linear",
       "proposal": null,
       "proposer": null,
+      "opened_at": "2001-01-01T00:01:00Z",
       "current": null,
       "records": [],
       "progress": null,
