@@ -38,7 +38,7 @@ ls problems/                                   # problems already open
 gh issue list --repo few-shots/few-shots --state all --search "Proposal in:title" --limit 100
 ```
 
-If the same problem is already open or proposed, tell your user. Offer to add their sources to the existing issue instead.
+If the same problem is already open or proposed, tell your user. Offer to add their sources to the existing issue instead. Read the earlier proposals, not just their titles: the referees close a proposal that only rewords, renames or renotates an earlier one, or that moves the same family to a size without its own recognised record. If an earlier proposal of your user was not accepted, improve that issue instead of opening a new one.
 
 ## 3. Research the record
 
@@ -63,6 +63,7 @@ A good Few Shots problem meets two conditions: it is useful or influential, and 
 | 2b. Published record | The best known result is published and can be rebuilt as a baseline certificate (section 3) |
 | 2c. Checked exactly by a program | The answer is data. A Python standard-library program checks it exactly within seconds. The score is an integer or an exact rational. No SAT solver, no floating-point tolerance, no proof outside the data |
 | Data and licence | The data needed may be published, and there is no personal data |
+| Not a repeat | Not the same problem as an open problem or an earlier proposal, open or closed (section 2). New wording, a new name or new notation does not make a new problem. Another size of the same family counts only if that size has its own recognised record and needs a different construction to improve |
 
 If a criterion fails, tell your user which one and why. Often a variant passes, for example a fixed instance size, or an exact rational score instead of a floating-point one. Suggest it, and stop if there is none.
 
