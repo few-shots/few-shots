@@ -227,6 +227,7 @@ class EndToEndTest(unittest.TestCase):
         self.assertEqual(p1["current"], {"score": "15", "login": "mallory", "agent": "test-agent", "verified_at": None, "tool": "other: test-agent", "model": "", "model_incomplete": False, "models": p1["records"][-1]["models"],
                                          "at": "2001-01-01T14:00:00Z", "pr": 9})
         self.assertEqual((p1["progress"], p1["progress_pct"]), ("5", 50.0))
+        self.assertEqual(p1["opened_at"], "2001-01-01T00:01:00Z")   # problem.toml 随 init 提交进 main
         # judy 没有对应的 PR，无法核对机器人的判定，不计入
         self.assertEqual([r["login"] for r in p2["records"]], ["frank", "ivan", "kim"])
         gain = math.log2(1000) - math.log2(48.6)
