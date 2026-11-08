@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T06:37:37Z",
+  "updated_at": "2026-11-08T07:03:06Z",
   "problems": [
     {
       "id": "p001",
@@ -509,6 +509,30 @@
       "proposal": 57,
       "proposer": "huangxin-design",
       "opened_at": "2026-11-08T06:37:27Z",
+      "current": null,
+      "records": [],
+      "progress": null,
+      "progress_pct": 0.0
+    },
+    {
+      "id": "p017",
+      "slug": "lop-be75eec-500",
+      "dir": "problems/p017-lop-be75eec-500",
+      "title_zh": "线性排序 N-be75eec_500",
+      "title_en": "Linear ordering of N-be75eec_500",
+      "repo": "few-shots/few-shots",
+      "url": "https://github.com/few-shots/few-shots/tree/main/problems/p017-lop-be75eec-500",
+      "metric_zh": "排序得分",
+      "metric_en": "ordering score",
+      "direction": "max",
+      "unit": "分",
+      "baseline": "33489269",
+      "epsilon": "1",
+      "epsilon_mode": "absolute",
+      "progress_transform": "linear",
+      "proposal": 52,
+      "proposer": "Li-Yu123456",
+      "opened_at": null,
       "current": null,
       "records": [],
       "progress": null,

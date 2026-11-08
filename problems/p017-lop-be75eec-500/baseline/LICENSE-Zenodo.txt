@@ -1,0 +1,55 @@
+Baseline attribution and licence
+
+Dataset: Extended Memetic Algorithm for the LOP¨
+Creators (as credited by the source): Carlos Segura, Gara Miranda,
+Lázaro Lugo
+Published: 2025
+Source: https://zenodo.org/records/14720629
+DOI: https://doi.org/10.5281/zenodo.14720629
+Data: https://zenodo.org/api/records/14720629/files/BKS.zip/content
+Archive member: BKS/N-be75eec_500_26h
+
+The source record's Rights section states, verbatim:
+
+Creative Commons Attribution 4.0 International
+The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited.
+
+License: https://creativecommons.org/licenses/by/4.0/
+Legal code (also the record's embedded licence URI):
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Paper: Lázaro Lugo, Carlos Segura and Gara Miranda,
+Future trends in the design of memetic algorithms: the case of the
+linear ordering problem.
+https://arxiv.org/abs/2405.08285
+https://doi.org/10.1007/s00521-025-11171-z
+
+The following author permission is reproduced verbatim:
+
+Author: carlossegurag
+Source: https://github.com/carlossegurag/LOP_MA-EDM/issues/1#issuecomment-6621567958
+
+Hello, thank you very much for your interest. For the permission it is ok as: "free to use with citation of the Memetic Computing paper".
+
+Another important point is that later we published new results which further improves it. The new results are available at https://zenodo.org/records/14720629. These new solutions are from the paper "Future trends in the design of memetic algorithms: the case of the linear ordering problem" (https://link.springer.com/article/10.1007/s00521-025-11171-z). If you prefer to cite the new paper and use some of the new BKS, feel free to use them.
+
+Adaptation: retain the 500 zero-based vertex indices in the original
+Solution line, unchanged in value and order; remove Solution/Cost labels
+and serialize as the JSON object with the single key order. Original
+file SHA-256:
+53830fd93a01b4b262dc39bd779d7c632b26204825648dddfb97026909fe6ec5
+
+Historical test permutation: BKS/xLOLIB2/N-be75eec_500_9 from
+https://raw.githubusercontent.com/carlossegurag/LOP_MA-EDM/main/BKS.zip
+Original file SHA-256:
+68d78601974a2c1746d86c458247e09514a4686ab3bef17ff8df8cf6867bad9b
+Citation: Lázaro Lugo, Carlos Segura and Gara Miranda,
+A Diversity-Aware Memetic Algorithm for the Linear Ordering Problem:
+Improving Best-Known Solutions for Standard Benchmarks,
+Memetic Computing (2022); https://arxiv.org/abs/2106.02696
+It is used under the author's free-to-use-with-citation permission
+quoted above and is embedded only in verify/test_verify.py.
+
+The derived baseline/certificate.json retains CC BY 4.0 attribution and
+licensing, rather than the repository's generic CC0 data declaration.
+The separate xLOLIB2 matrix terms are in LICENSE-xLOLIB2.txt.
