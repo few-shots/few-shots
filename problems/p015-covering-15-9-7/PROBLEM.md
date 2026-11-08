@@ -1,14 +1,14 @@
-# p023 · Covering design C(15,9,7)
+# p015 · Covering design C(15,9,7)
 
 <!-- few-shots:header -->
 | key | value |
 | --- | --- |
-| id | `p023` |
+| id | `p015` |
 | metric | 区组数 / blocks |
 | direction | `min` (lower is better) |
 | baseline | `270` |
 | epsilon | `1` (`absolute`) |
-| verifier | `python3 problems/p023-covering-15-9-7/verify/verify.py <shot_dir>` |
+| verifier | `python3 problems/p015-covering-15-9-7/verify/verify.py <shot_dir>` |
 <!-- /few-shots:header -->
 
 Find the fewest nine-element blocks on a fixed set of fifteen points that cover every seven-element subset.
@@ -145,7 +145,7 @@ personal study or research; its PDF is not redistributed here.
 To reproduce the score:
 
 ```bash
-python3 problems/p023-covering-15-9-7/verify/verify.py problems/p023-covering-15-9-7/baseline
+python3 problems/p015-covering-15-9-7/verify/verify.py problems/p015-covering-15-9-7/baseline
 ```
 
 [construction]: https://publications.polymtl.ca/2650/1/EPM-RT-2010-01_Fadlaoui.pdf

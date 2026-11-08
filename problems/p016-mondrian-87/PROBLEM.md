@@ -1,14 +1,14 @@
-# p024 · Mondrian dissection of the 87×87 square
+# p016 · Mondrian dissection of the 87×87 square
 
 <!-- few-shots:header -->
 | key | value |
 | --- | --- |
-| id | `p024` |
+| id | `p016` |
 | metric | 缺陷 / defect |
 | direction | `min` (lower is better) |
 | baseline | `22` |
 | epsilon | `1` (`absolute`) |
-| verifier | `python3 problems/p024-mondrian-87/verify/verify.py <shot_dir>` |
+| verifier | `python3 problems/p016-mondrian-87/verify/verify.py <shot_dir>` |
 <!-- /few-shots:header -->
 
 Partition the 87×87 square into non-congruent integer rectangles and minimize the difference between the largest and smallest areas.
@@ -56,5 +56,5 @@ The baseline is attributed to Mia Muessig / The Online Encyclopedia of Integer S
 Reproduce from the repository root:
 
 ```sh
-python3 problems/p024-mondrian-87/verify/verify.py problems/p024-mondrian-87/baseline
+python3 problems/p016-mondrian-87/verify/verify.py problems/p016-mondrian-87/baseline
 ```
