@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T07:03:06Z",
+  "updated_at": "2026-11-08T07:03:29Z",
   "problems": [
     {
       "id": "p001",
@@ -532,7 +532,7 @@
       "progress_transform": "linear",
       "proposal": 52,
       "proposer": "Li-Yu123456",
-      "opened_at": null,
+      "opened_at": "2026-11-08T07:03:18Z",
       "current": null,
       "records": [],
       "progress": null,
