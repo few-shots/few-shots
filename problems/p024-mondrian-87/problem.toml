@@ -1,0 +1,39 @@
+# Problem metadata. Only the referees can change this file (see .github/CODEOWNERS).
+# Scoring always uses this file on main; changes in a shot PR have no effect.
+
+id = "p024"                       # Directory name is <id>-<slug>.
+slug = "mondrian-87"
+title_zh = "87×87 Mondrian 正方形分割"
+title_en = "Mondrian dissection of the 87×87 square"
+kind = "certificate"              # Participants submit data, not executable code.
+sandbox = false
+proposal = 57                     # Original proposal issue number.
+proposer = "huangxin-design"      # Proposal credit belongs to this GitHub account.
+
+metric_zh = "缺陷"
+metric_en = "defect"
+direction = "min"                 # A smaller area difference is better.
+progress_unit = "格"
+
+# Mia Muessig (2025), OEIS A276523: a(87)<=22, not a proved optimum.
+# https://oeis.org/A276523/internal
+# https://oeis.org/A276523/a276523_2.txt
+# Rebuilt from the public grid; attribution is in baseline/LICENSE-OEIS.txt.
+baseline_score = "22"             # Exact integer score of the public construction.
+baseline_kind = "certificate"
+epsilon = "1"                     # Smallest distinguishable integer improvement.
+epsilon_mode = "absolute"
+progress_transform = "linear"
+
+verifier_timeout_sec = 5          # Hard timeout per verification, in seconds.
+max_certificate_bytes = 1048576   # Maximum certificate.json size: 1 MiB.
+
+[submission]                     # Limits enforced on shot directories.
+max_files = 8
+max_file_bytes = 262144
+max_shot_md_bytes = 32768
+max_total_bytes = 1572864
+
+[params]                         # Fixed mathematical and format parameters.
+n = 87                           # Side length of the square.
+max_rectangles = 1000             # At least two rectangles are required.
