@@ -1,0 +1,28 @@
+La Jolla Coverings Repository, version 1.2
+Creator: Daniel Gordon
+DOI: https://doi.org/10.5281/zenodo.19735294
+Record: https://zenodo.org/records/19735294
+
+The following notice is reproduced verbatim from the record's rights metadata:
+
+Copyright (C) 2026 Daniel Gordon
+
+Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+The record describes the license as follows:
+The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited.
+
+Attribution and adaptation:
+The construction is due to Kamal Fadlaoui and Philippe Galinier; Daniel Gordon
+maintains the related La Jolla Coverings Repository dataset. The supplied
+certificate was independently reconstructed from Table 1 of EPM-RT-2010-01,
+using zero-based colex decoding and sorting each block and the block list.
+Only the numerical construction is included. Third-party source attribution
+and licensing are retained; this baseline is not relicensed under CC0.
+
+This file preserves the notice actually available in the Zenodo record. It is
+not a copy of the archive's separate LICENSE file, which was not available in
+the source bundle. The archive's C(15,9,7) JSON entry was not used to reconstruct
+this certificate; no byte-for-byte identity with that entry is asserted.
