@@ -1,0 +1,23 @@
+Source: Kamal Fadlaoui and Philippe Galinier,
+Covering designs constructed by using the TS-CD algorithm,
+EPM-RT-2010-01 (2010), Table 1, printed page 2.
+https://publications.polymtl.ca/2650/1/EPM-RT-2010-01_Fadlaoui.pdf
+
+The source copyright page identifies:
+2010
+Kamal Fadlaoui Philippe Galinier
+Tous droits réservés
+
+Original reproduction notice (line wrapping normalized):
+
+Toute reproduction de ce document à des fins d'étude personnelle ou de recherche est autorisée à
+la condition que la citation ci-dessus y soit mentionnée.
+
+Tout autre usage doit faire l'objet d'une autorisation écrite des auteurs. Les demandes peuvent
+être adressées directement aux auteurs (consulter le bottin sur le site http://www.polymtl.ca/) ou
+par l'entremise de la Bibliothèque :
+
+The certificate contains numerical block data reconstructed from Table 1,
+not a redistribution of the paper. Colex ranks were decoded to zero-based
+point labels and the resulting blocks sorted. The paper itself is not
+licensed under the dataset's CC BY 4.0 license or this repository's CC0 terms.

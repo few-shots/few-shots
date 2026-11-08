@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T13:33:30Z",
+  "updated_at": "2026-11-08T04:49:30Z",
   "problems": [
     {
       "id": "p001",
@@ -461,6 +461,30 @@
       "proposal": 49,
       "proposer": "pedestrian6",
       "opened_at": "2026-11-01T08:29:06Z",
+      "current": null,
+      "records": [],
+      "progress": null,
+      "progress_pct": 0.0
+    },
+    {
+      "id": "p023",
+      "slug": "covering-15-9-7",
+      "dir": "problems/p023-covering-15-9-7",
+      "title_zh": "15 点覆盖设计 C(15,9,7)",
+      "title_en": "Covering design C(15,9,7)",
+      "repo": "few-shots/few-shots",
+      "url": "https://github.com/few-shots/few-shots/tree/main/problems/p023-covering-15-9-7",
+      "metric_zh": "区组数",
+      "metric_en": "blocks",
+      "direction": "min",
+      "unit": "个区组",
+      "baseline": "270",
+      "epsilon": "1",
+      "epsilon_mode": "absolute",
+      "progress_transform": "linear",
+      "proposal": 56,
+      "proposer": "huangxin-design",
+      "opened_at": null,
       "current": null,
       "records": [],
       "progress": null,

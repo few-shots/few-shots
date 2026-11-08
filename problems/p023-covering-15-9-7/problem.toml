@@ -1,0 +1,42 @@
+# Problem metadata. Only the referees can change this file (see .github/CODEOWNERS).
+# Scoring always uses this file on main; changes in a shot PR have no effect.
+
+id = "p023"                       # Directory name is <id>-<slug>.
+slug = "covering-15-9-7"
+title_zh = "15 点覆盖设计 C(15,9,7)"
+title_en = "Covering design C(15,9,7)"
+kind = "certificate"              # Participants submit data, not executable code.
+sandbox = false
+proposal = 56                     # Original proposal issue number.
+proposer = "huangxin-design"      # Proposal credit belongs to this GitHub account.
+
+metric_zh = "区组数"
+metric_en = "blocks"
+direction = "min"                 # Fewer blocks are better.
+progress_unit = "个区组"
+
+# Fadlaoui and Galinier (2010), EPM-RT-2010-01, Table 1: (15,9,7,270).
+# https://publications.polymtl.ca/2650/1/EPM-RT-2010-01_Fadlaoui.pdf
+# Reconstructed from the published ranks; attribution is in baseline/LICENSE-*.txt.
+baseline_score = "270"            # Exact integer score, not a proved optimum.
+baseline_kind = "certificate"
+epsilon = "1"                     # Smallest distinguishable integer improvement.
+epsilon_mode = "absolute"
+progress_transform = "linear"
+
+verifier_timeout_sec = 5           # Hard timeout per verification, in seconds.
+max_certificate_bytes = 65536     # Maximum certificate.json size in bytes.
+
+[submission]                      # Limits enforced on shot directories.
+max_files = 8
+max_file_bytes = 262144
+max_shot_md_bytes = 32768
+max_total_bytes = 524288
+
+[params]                          # Fixed verifier constants, checked by its tests.
+points = 15                       # Point labels are 0 through 14.
+block_size = 9
+cover_size = 7
+max_blocks = 1000                 # Repeated blocks count as separate entries.
+max_depth = 8                     # Maximum JSON container nesting.
+max_int_digits = 18               # Decimal digits per integer, excluding its sign.
