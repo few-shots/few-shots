@@ -1,0 +1,42 @@
+# Problem metadata. Only the referees can change this file (see .github/CODEOWNERS).
+# Scoring always uses this file on main; changes in a shot PR have no effect.
+
+id = "p017"                       # Directory name is <id>-<slug>.
+slug = "lop-be75eec-500"
+title_zh = "线性排序 N-be75eec_500"
+title_en = "Linear ordering of N-be75eec_500"
+kind = "certificate"              # Participants submit data, not executable code.
+sandbox = false
+proposal = 52                     # Original proposal issue number.
+proposer = "Li-Yu123456"           # Proposal credit belongs to this GitHub account.
+
+metric_zh = "排序得分"
+metric_en = "ordering score"
+direction = "max"                 # Higher strict upper-triangle sum is better.
+progress_unit = "分"
+
+# Public BKS: Segura, Miranda and Lugo, Zenodo dataset (2025).
+# https://zenodo.org/records/14720629 (CC-BY-4.0)
+# https://zenodo.org/api/records/14720629/files/BKS.zip/content
+# Member BKS/N-be75eec_500_26h: Cost 33489269, reproduced from its permutation.
+# Paper association: https://github.com/carlossegurag/LOP_MA-EDM/issues/1#issuecomment-6621567958
+# Third-party attribution and permissions are in baseline/LICENSE-*.txt.
+baseline_score = "33489269"        # Exact public construction value, not a proved optimum.
+baseline_kind = "certificate"
+epsilon = "1"                     # Integer scores; pair-difference gcd is 1.
+epsilon_mode = "absolute"
+progress_transform = "linear"
+
+verifier_timeout_sec = 5           # Hard timeout per verification, in seconds.
+max_certificate_bytes = 16384     # certificate.json: at most 16 KiB.
+
+[submission]                      # Limits enforced on shot directories.
+max_files = 8
+max_file_bytes = 262144
+max_shot_md_bytes = 32768
+max_total_bytes = 524288
+
+[params]                          # Fixed instance from the EJOR2015 public archive.
+n = 500
+instance = "N-be75eec_500"
+instance_sha256 = "34e940a0ecd9c0a054dfa87c0ad4d2b9286ba141d98be1dcb7ce463fe3f22437"

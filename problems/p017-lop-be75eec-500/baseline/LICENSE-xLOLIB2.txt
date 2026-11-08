@@ -1,0 +1,50 @@
+Third-party matrix data: xLOLIB2 / N-be75eec_500
+
+Source: https://raw.githubusercontent.com/sgpceurj/EJOR2015/master/xLOLIB2.zip
+Archive member: xLOLIB2/N-be75eec_500
+Creators: Josu Ceberio, Alexander Mendiburu and Jose A. Lozano
+Reference: The linear ordering problem revisited, European Journal of
+Operational Research (2015). Companion repository:
+https://github.com/sgpceurj/EJOR2015
+Original bytes SHA-256:
+34e940a0ecd9c0a054dfa87c0ad4d2b9286ba141d98be1dcb7ce463fe3f22437
+
+The following permission excerpts and redistribution question are
+reproduced verbatim from the public discussion, excluding quoted
+email replies and notification footers.
+
+Author: sgpceurj
+Source: https://github.com/sgpceurj/EJOR2015/issues/1#issuecomment-6598375344
+
+Hi!
+
+Feel free to use the instances. The only condition is not to use them directly or indirectly for commercial purposes.
+
+Let’s walk to open science.
+
+Best,
+Josu
+
+Author: Li-Yu123456
+Source: https://github.com/sgpceurj/EJOR2015/issues/1#issuecomment-6602047593
+
+Thank you, Josu — much appreciated!
+
+One precise follow-up to make the permission airtight for our use case: the problem's checker needs to **embed the instance matrix** (the 500×500 integers of `N-be75eec_500`) inside a Python file that is **publicly distributed** with the non-commercial open-science benchmark (github.com/few-shots/few-shots; rewards are drink vouchers; the problem statement cites your EJOR 2015 paper and carries your non-commercial condition verbatim).
+
+**Does your permission cover this public redistribution of the instance data within the non-commercial benchmark?** A simple yes (or a short correction) in this thread is perfect — we want the record to be unambiguous. Thanks again for supporting open science!
+
+Author: sgpceurj
+Source: https://github.com/sgpceurj/EJOR2015/issues/1#issuecomment-6625409953
+
+Yes!
+
+Adaptation: the original instance bytes are zlib-compressed and base64-
+encoded inside verify/verify.py. Loading reverses this encoding, checks
+the source digest and parses the unchanged row-major integer matrix.
+
+The non-commercial condition applies to the embedded matrix. Public
+redistribution is permitted in the specific non-commercial benchmark
+described above. The matrix is not relicensed under the repository's
+Apache-2.0 code licence or CC0 data declaration. Verifier code retains
+the repository code licence; that licence does not cover this matrix.
