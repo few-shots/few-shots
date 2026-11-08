@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T05:18:23Z",
+  "updated_at": "2026-11-08T05:18:43Z",
   "problems": [
     {
       "id": "p001",
@@ -508,7 +508,7 @@
       "progress_transform": "linear",
       "proposal": 57,
       "proposer": "huangxin-design",
-      "opened_at": null,
+      "opened_at": "2026-11-08T05:18:34Z",
       "current": null,
       "records": [],
       "progress": null,
