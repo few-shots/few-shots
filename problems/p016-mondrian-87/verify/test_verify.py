@@ -1,4 +1,4 @@
-"""Regression tests for the p024 certificate contract and review counterexamples."""
+"""Regression tests for the p016 certificate contract and review counterexamples."""
 
 from __future__ import annotations
 

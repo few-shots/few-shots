@@ -1,7 +1,7 @@
 # Problem metadata. Only the referees can change this file (see .github/CODEOWNERS).
 # Scoring always uses this file on main; changes in a shot PR have no effect.
 
-id = "p024"                       # Directory name is <id>-<slug>.
+id = "p016"                       # Directory name is <id>-<slug>.
 slug = "mondrian-87"
 title_zh = "87×87 Mondrian 正方形分割"
 title_en = "Mondrian dissection of the 87×87 square"

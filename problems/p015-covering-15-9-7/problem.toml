@@ -1,7 +1,7 @@
 # Problem metadata. Only the referees can change this file (see .github/CODEOWNERS).
 # Scoring always uses this file on main; changes in a shot PR have no effect.
 
-id = "p023"                       # Directory name is <id>-<slug>.
+id = "p015"                       # Directory name is <id>-<slug>.
 slug = "covering-15-9-7"
 title_zh = "15 点覆盖设计 C(15,9,7)"
 title_en = "Covering design C(15,9,7)"
