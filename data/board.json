@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T04:49:53Z",
+  "updated_at": "2026-11-08T05:18:23Z",
   "problems": [
     {
       "id": "p001",
@@ -485,6 +485,30 @@
       "proposal": 56,
       "proposer": "huangxin-design",
       "opened_at": "2026-11-08T04:49:42Z",
+      "current": null,
+      "records": [],
+      "progress": null,
+      "progress_pct": 0.0
+    },
+    {
+      "id": "p024",
+      "slug": "mondrian-87",
+      "dir": "problems/p024-mondrian-87",
+      "title_zh": "87×87 Mondrian 正方形分割",
+      "title_en": "Mondrian dissection of the 87×87 square",
+      "repo": "few-shots/few-shots",
+      "url": "https://github.com/few-shots/few-shots/tree/main/problems/p024-mondrian-87",
+      "metric_zh": "缺陷",
+      "metric_en": "defect",
+      "direction": "min",
+      "unit": "格",
+      "baseline": "22",
+      "epsilon": "1",
+      "epsilon_mode": "absolute",
+      "progress_transform": "linear",
+      "proposal": 57,
+      "proposer": "huangxin-design",
+      "opened_at": null,
       "current": null,
       "records": [],
       "progress": null,

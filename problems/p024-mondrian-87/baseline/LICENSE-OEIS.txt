@@ -1,0 +1,30 @@
+Baseline attribution and license
+
+Creator: Mia Muessig
+Source: The Online Encyclopedia of Integer Sequences, A276523
+Sequence: https://oeis.org/A276523
+Record and attribution: https://oeis.org/A276523/internal
+Construction: https://oeis.org/A276523/a276523_2.txt
+
+License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+https://creativecommons.org/licenses/by-sa/4.0/
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+OEIS End-User License Agreement: https://oeis.org/LICENSE
+
+The following clauses are reproduced verbatim from the OEIS agreement:
+
+2. The OEIS is made available under the Creative Commons Attribution Share-Alike 4.0 license (CC-BY-SA-4.0).
+3. To satisfy the attribution requirements of that license (section 3(a)), attributions should credit The Online Encyclopedia of Integer Sequences and provide a URL to the main page https://oeis.org/ or to a specific sequence (e.g. https://oeis.org/A000108).
+
+Source size: 208711 bytes.
+Source SHA-256: 073c266cd84ab5480a696615b935bf95c23f7ec16a6a1c754dd65347518ec66b
+
+Adaptation: extracted the 87-by-87 character grid following a(87)<=22;
+each label was replaced by its bounding rectangle [x,y,w,h], and the
+rectangles were sorted numerically. The first source row is y=0, the bottom
+row in the certificate's Cartesian coordinate system. This is a vertical
+reflection of the source's top-to-bottom display. Labels were discarded.
+
+The derived baseline/certificate.json is distributed under CC BY-SA 4.0.
+It is not relicensed under CC0. The verifier code is Apache-2.0 under the
+repository license; this baseline notice does not change the code license.
