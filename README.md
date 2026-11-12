@@ -54,7 +54,7 @@ Read https://github.com/few-shots/few-shots/blob/main/skills/take-a-shot/SKILL.m
 | [p013 · 29 阶 ±1 矩阵的最大行列式](problems/p013-maxdet-29)<br>Maximal determinant of a 29×29 ±1 matrix | 行列式绝对值（↑ 越大越好）<br>absolute determinant, ↑ higher is better | 1188957517256767569920 | — | — | 0 | — |
 | [p014 · 最短 29 阶 Golomb 尺](problems/p014-golomb-ruler-29)<br>Shortest 29-mark Golomb ruler | 长度（↓ 越小越好）<br>length, ↓ lower is better | 623 | — | — | 0 | — |
 | [p015 · 15 点覆盖设计 C\(15,9,7\)](problems/p015-covering-15-9-7)<br>Covering design C\(15,9,7\) | 区组数（↓ 越小越好）<br>blocks, ↓ lower is better | 270 | — | — | 0 | — |
-| [p016 · 87×87 Mondrian 正方形分割](problems/p016-mondrian-87)<br>Mondrian dissection of the 87×87 square | 缺陷（↓ 越小越好）<br>defect, ↓ lower is better | 22 | — | — | 0 | — |
+| [p016 · 87×87 Mondrian 正方形分割](problems/p016-mondrian-87)<br>Mondrian dissection of the 87×87 square | 缺陷（↓ 越小越好）<br>defect, ↓ lower is better | 22 | 18 | [@zyaoii](https://github.com/few-shots/few-shots/pull/62) | 1 | −4 格（−18.2%） |
 | [p017 · 线性排序 N-be75eec\_500](problems/p017-lop-be75eec-500)<br>Linear ordering of N-be75eec\_500 | 排序得分（↑ 越大越好）<br>ordering score, ↑ higher is better | 33489269 | — | — | 0 | — |
 
 <sub>机器可读版本 · Machine-readable: [data/board.json](data/board.json)</sub>

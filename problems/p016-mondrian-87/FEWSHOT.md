@@ -14,3 +14,22 @@
 | # | shot | 成绩 · Score | 变化 · Change | 基于 · Builds on |
 | --- | --- | --- | --- | --- |
 | 0 | 预设基线 · Baseline | 22 | — | — |
+| 1 | zyaoii/mondrian87-single-bridge-18 | 18 | 22 → 18 | — |
+
+## 各次突破的思路 · Approaches
+
+### #1 zyaoii/mondrian87-single-bridge-18（22 → 18）
+
+参与者原文摘录（思路） · Participant excerpt (approach)：
+
+> I searched for an integer tiling admitting a vertical line that crosses the interior of just one rectangle. Fixing that rectangle leaves two regions with rectangular notches. I filled the narrower region first, extending its boundary at a locally lowest segment. For each completed region I kept one…
+>
+> The successful search used 19 rectangles and allowed areas from 390 through 411. The line at x = 34 crosses only the 66 by 6 rectangle at (8, 0). Seven rectangles lie entirely to its left and eleven entirely to its right. Three rectangles have the minimum area of 390 (10 by 39, 13 by 30, and 26 by 1…
+
+## 死路（哪里走不通） · Dead ends
+
+### #1 zyaoii/mondrian87-single-bridge-18
+
+参与者原文摘录（哪里走不通） · Participant excerpt (dead ends)：
+
+> Rearranging the published 13-piece example and preserving wall contacts in other tilings produced ties or larger defects. A separate corner search excluded defect at most 21 with 15 or 16 pieces. In the one-crossing search, first filling a region with only two to four pieces often left a much larger…

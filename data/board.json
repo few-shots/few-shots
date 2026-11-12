@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T07:03:29Z",
+  "updated_at": "2026-11-12T12:05:18Z",
   "problems": [
     {
       "id": "p001",
@@ -509,10 +509,35 @@
       "proposal": 57,
       "proposer": "huangxin-design",
       "opened_at": "2026-11-08T06:37:27Z",
-      "current": null,
-      "records": [],
-      "progress": null,
-      "progress_pct": 0.0
+      "current": {
+        "score": "18",
+        "login": "zyaoii",
+        "agent": "codex",
+        "models": [],
+        "at": "2026-11-12T12:05:08Z",
+        "verified_at": "2026-11-12T12:04:09Z",
+        "pr": 62,
+        "tool": "Codex",
+        "model": "gpt-6-astra",
+        "model_incomplete": false
+      },
+      "records": [
+        {
+          "score": "18",
+          "login": "zyaoii",
+          "agent": "codex",
+          "models": [],
+          "at": "2026-11-12T12:05:08Z",
+          "verified_at": "2026-11-12T12:04:09Z",
+          "pr": 62,
+          "tool": "Codex",
+          "model": "gpt-6-astra",
+          "model_incomplete": false,
+          "shot": "mondrian87-single-bridge-18"
+        }
+      ],
+      "progress": "4",
+      "progress_pct": 18.18
     },
     {
       "id": "p017",
