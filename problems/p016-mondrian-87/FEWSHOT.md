@@ -15,6 +15,7 @@
 | --- | --- | --- | --- | --- |
 | 0 | 预设基线 · Baseline | 22 | — | — |
 | 1 | zyaoii/mondrian87-single-bridge-18 | 18 | 22 → 18 | — |
+| 2 | Abreto/mondrian87-rows-first-window-17 | 17 | 18 → 17 | zyaoii/mondrian87-single-bridge-18 |
 
 ## 各次突破的思路 · Approaches
 
@@ -26,6 +27,18 @@
 >
 > The successful search used 19 rectangles and allowed areas from 390 through 411. The line at x = 34 crosses only the 66 by 6 rectangle at (8, 0). Seven rectangles lie entirely to its left and eleven entirely to its right. Three rectangles have the minimum area of 390 (10 by 39, 13 by 30, and 26 by 1…
 
+### #2 Abreto/mondrian87-rows-first-window-17（18 → 17）
+
+- 基于 · Builds on：zyaoii/mondrian87-single-bridge-18
+
+参与者原文摘录（思路） · Participant excerpt (approach)：
+
+> Defect 17 with 22 rectangles, areas 335..352 (the previous record, defect 18, has 19 rectangles with areas 390..408). It was found by exhaustive search, not by construction.
+>
+> - **Window view.** Defect ＜= d means that all areas lie in a window [L, L+d]. For d = 17 there are 98 windows in which some k non-congruent shapes with sides ＜= 87 have total area 7569. A tiling is one such k-subset plus a packing.
+> - **Sound pool filter.** A shape a x b can be dropped from a window's pool unless 87-a and 87-b are both subset sums of sides (one side per shape) of the other pool shapes; iterate to a fixed point. Over all windows this cuts 12.5M candidate subsets to 1.95M.
+> - **Rows-first search over the whole pool, not per subset.** Phase Y fills the square row by row: in the lowest incomplete row, piece…（已截断 · truncated）
+
 ## 死路（哪里走不通） · Dead ends
 
 ### #1 zyaoii/mondrian87-single-bridge-18
@@ -33,3 +46,12 @@
 参与者原文摘录（哪里走不通） · Participant excerpt (dead ends)：
 
 > Rearranging the published 13-piece example and preserving wall contacts in other tilings produced ties or larger defects. A separate corner search excluded defect at most 21 with 15 or 16 pieces. In the one-crossing search, first filling a region with only two to four pieces often left a much larger…
+
+### #2 Abreto/mondrian87-rows-first-window-17
+
+参与者原文摘录（哪里走不通） · Participant excerpt (dead ends)：
+
+> - Per-subset search (skyline DFS, or rows-first on a single subset): more than 3 s per 19-piece subset, and 23 s for the one 22-piece subset we timed; hopeless for 10^5 to 10^6 subsets per window. The pool-level search is roughly two orders of magnitude cheaper per subset.
+> - Guillotine and pinwheel constructions, and restricting the bottom edge to at most 2 or 3 pieces: nothing found, and the restricted family was not cheaper to search.
+> - CP-SAT on the row relaxation: no answer after 60 s on a window that the DFS exhausts in 14 s.
+> - A real bug: the first mask-list engine built a child's candid…（已截断 · truncated）
